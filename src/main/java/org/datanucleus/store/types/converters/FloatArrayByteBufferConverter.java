@@ -35,7 +35,7 @@ public class FloatArrayByteBufferConverter implements TypeConverter<float[], Byt
     public ByteBuffer toDatastoreType(float[] memberValue)
     {
         byte[] bytes = TypeConversionHelper.getByteArrayFromFloatArray(memberValue);
-        ByteBuffer byteBuffer = ByteBuffer.allocate(memberValue.length);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(bytes.length);
         byteBuffer.put(bytes);
         return byteBuffer;
     }
